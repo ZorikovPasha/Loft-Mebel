@@ -1,0 +1,307 @@
+.header {
+
+  padding-bottom: 30px;
+
+  // .header__top
+
+  &__top {
+    padding: 10px 0;
+    color: #fff;
+    background: #313131;
+  }
+
+  &__top-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  // .header__nav
+
+  &__nav {
+  }
+
+  // .header__list
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  // .header__list-item
+
+  &__list-item {
+    margin-right: 30px;
+  }
+
+  // .header__list-link
+
+  &__list-link {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  // .header__connect
+
+  &__connect {
+  }
+
+  // .header__phone
+
+  &__phone {
+    font-size: 14px;
+    line-height: 16px;
+
+    margin-right: 30px;
+    padding-left: 26px;
+
+    position: relative;
+    &::after{
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(0%, -50%);
+      width: 16px;
+      height: 16px;
+      background-image: url('../images/icons/phone.svg');
+    }
+  }
+
+  &__phone--black::after {
+    background-image: url('../images/icons/phone-black.svg');
+  }
+
+  // .header__delivery
+
+  &__delivery {
+    font-size: 14px;
+    line-height: 16px;
+    padding-left: 40px;
+
+    position: relative;
+    &::after{
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(0%, -50%);
+      
+      width: 30px;
+      height: 17px;
+      background-image: url('../images/icons/delivery-icon.svg');
+    }
+  }
+
+  &__delivery--black {
+    margin-right: 40px;
+  }
+
+  &__delivery--black::after {
+    background-image: url('../images/icons/delivery-black.svg');
+  }
+
+  // .header__mid
+
+  &__mid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+  }
+
+  &__mid--tall {
+    padding: 46px 0 0;
+  }
+
+  &__mid--taller {
+    padding: 46px 0 47px;
+  }
+
+  // .header__form
+
+  &__form {
+    position: relative;
+    // width: 100%;
+    flex-grow: 1;
+    margin-right: 37px;
+  }
+
+  // .header__input
+
+  &__input {
+    width: 100%;
+    height: 50px;
+    padding: 17px 48px;
+    border: 1px solid #E6E6E6;
+
+    &,
+    &::placeholder {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+      color: $text;
+    }
+  }
+
+  &__input--spec {
+    background: #F9F9F9;
+    border: none;
+    height: 40px;  
+  }
+
+  // .header__search
+
+  &__search {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translate(0%, -50%);
+  }
+
+  // .header__user
+
+  &__user {
+  }
+
+  // .header__bottom
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.07);
+    padding: 0 40px 0 0;
+  }
+
+  // .header__categories
+
+  &__categories {
+  }
+
+  // .header__promo
+
+  &__promo {
+    position: relative;
+    margin-right: 47px;
+    margin-left: 10px;
+    padding: 24px 0 24px 15px;
+
+    &:hover .sub-list {
+      display: block;
+    }
+  }
+
+  &__promo-link {
+    color: #D74444;
+
+  }
+
+  // .header__more
+
+  &__more {
+    padding: 0 5px;
+  }
+}
+.logo {
+
+  display: inline-block;
+  margin-right: 38px;
+}
+
+.user-header {
+
+  // .user-header__link
+
+  &__link {
+    display: inline-block;
+  }
+
+  &__link + &__link {
+    margin-left: 25px;
+  }
+}
+
+.categories {
+
+  // .categories__list
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  // .categories__item
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 24px;
+    transform: all .2s;
+    cursor: pointer;
+    background-color: transparent;
+
+    &:hover {
+      background: #245462;
+      color: #fff;
+
+      path {
+        fill: white;
+      }
+
+      .sub-list {
+        display: block;
+      }
+    }
+
+    &:first-child {
+      padding-left: 40px;
+    }
+  }
+
+  // .categories__link
+
+  &__link {
+    margin-left: 10px;
+  }
+}
+
+.sub-list {
+
+  position: absolute;
+  z-index: 999;
+  top: 100%;
+  left: 0;
+
+  display: none;
+  min-width: 190px;
+  padding: 25px 5px 25px 25px;
+  cursor: default;
+
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.07);
+  background-color: #fff;
+
+  // .sub-list__item
+
+  &__item {
+  }
+
+  &__item + &__item {
+    margin-top: 23px;
+  }
+
+  // .sub-list__link
+
+  &__link {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 2px 0;
+    color: #414141;
+
+    &:hover {
+      color: #245462;
+    }
+  }
+}
