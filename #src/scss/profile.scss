@@ -409,7 +409,8 @@
 }
 
 @media (max-width:450px) {
-  .profile__names-right > p, a {
+  .profile__total,
+  .profile__rules {
     max-width: 106px;
   }
 }
