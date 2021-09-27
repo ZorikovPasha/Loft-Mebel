@@ -251,22 +251,6 @@
     cursor: pointer;
     background-color: transparent;
 
-    @media (min-width:992px) {
-      .categories__item:hover {
-        background: #245462;
-        color: #fff;
-  
-        path {
-          fill: white;
-        }
-  
-        .sub-list {
-          display: block;
-        }
-      }
-    }
-
-
     &:first-child {
       padding-left: 40px;
     }
@@ -278,6 +262,10 @@
 
   &__item--promo {
     display: none;
+  }
+
+  &__item-img {
+    display: block;
   }
 
 
@@ -327,6 +315,20 @@
   }
 }
 
+@media (min-width:992px) {
+  .categories__item:hover {
+    background: #245462;
+    color: #fff;
+
+    path {
+      fill: white;
+    }
+
+    .sub-list {
+      display: block;
+    }
+  }
+}
 
 @media (max-width:1200px) {
   .categories__item {
