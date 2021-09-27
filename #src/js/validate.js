@@ -11,6 +11,7 @@ function formValidate() {
   $('.contacts__form').validate({
     rules: {
       name: {
+        required: true,
         isName: true,
       },
       email: {

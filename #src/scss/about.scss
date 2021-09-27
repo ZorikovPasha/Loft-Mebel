@@ -26,6 +26,8 @@
 
 		&__inner {
       display: flex;
+      align-items: center;
+      justify-content: space-between;
       margin-right: -60px;
       padding: 89px 0 72px 100px;
 		}
@@ -33,7 +35,7 @@
 		// .about-top__text
 
 		&__text {
-      max-width: 430px;
+      width: 39%;
       margin-right: 48px;
       position: relative;
 
@@ -84,10 +86,11 @@
 		// .about-top__images
 
 		&__images {
-      width: calc( 100% - 580px );
+      width: 57.5% ;
       position: relative;
-      padding-bottom: 28%;
+      padding-bottom: 31%;
       overflow: hidden;
+      height: 0;
 
       img {
         position: absolute;
@@ -214,6 +217,7 @@
       display: grid;
       grid-template-columns: repeat(2, minmax(auto, 570px) );
       grid-gap: 32px 39px;
+      padding: 0 10px;
 		}
 
 		// .about-features__item
@@ -321,8 +325,8 @@
 		&__item {
       display: flex;
       align-items: flex-start;
-      max-width: 348px;
-		}
+      width: 30%;
+    }
 
 		// .economy__item-box
 
@@ -340,6 +344,7 @@
         width: 20px;
         height: 20px;
         background-image: url('../images/icons/economy.svg');
+        background-size: contain;
       }
 		}
 
@@ -370,4 +375,216 @@
       line-height: 140.19%;
       text-align: center;
 		}
+}
+
+
+
+@media (max-width:1200px) {
+  .about-top__inner {
+    margin-right: 0;
+    padding-left: 0;
+  }
+}
+
+@media (max-width:992px) {
+  .about-top {
+    padding-bottom: 30px;
+  }
+  .about-top__inner {
+    padding: 40px 0;
+  }
+  .about-top__container::after {
+    position: static;
+    display: none;
+  }
+
+
+
+  .about-features {
+    padding: 50px 0 50px;
+  }
+
+
+  .economy {
+    padding-bottom: 45px;
+  }
+  .economy__title {
+    margin-bottom: 27px;
+  }
+
+
+  .about-motto {
+    padding: 40px 0 70px;
+  }
+}
+
+@media (max-width:890px) {
+  .about-top__inner {
+    flex-direction: column-reverse;
+  }
+  .about-top__text {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  .about-top__images {
+    width: 100%;
+    padding-bottom: 53%;
+    margin-bottom: 25px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 64%;
+      background-color: #D7E8ED;
+    }
+  } 
+  .about-benefits__title {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width:810px) {
+  .economy__item-text {
+    font-size: 12px;
+    line-height: 140%;
+  }
+}
+
+@media (max-width:766px) {
+  .about-benefits__item {
+
+    img {
+      max-width: 38px;
+    }
+  }
+  .about-benefits__item-text {
+    margin-left: 10px;
+  }
+  .about-benefits__items {
+    grid-gap: 30px 30px;
+  }
+
+
+  .about-features__title {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .about-features__text {
+    font-size: 12px;
+    line-height: 140.19%;
+  }
+
+
+  .economy__items {
+    flex-direction: column;
+    width: 90%;
+    margin-left: auto;
+  }
+  .economy__item {
+    width: 100%;
+  }
+
+  .economy__item + .economy__item {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width:680px) {
+  .about-benefits__items {
+    grid-template-columns: 1fr;
+    width: 90%;
+    margin-left: auto;
+  }
+
+  .about-features__items {
+    grid-template-columns: 1fr;
+    width: 90%;
+    margin-left: auto;
+  }
+
+
+
+  .about-motto__text {
+    font-size: 18px;
+    line-height: 140.19%;
+  }
+}
+
+@media (max-width:510px) {
+  .about-top__inner {
+    padding: 0;
+  }
+  .about-top__title {
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .about-benefits {
+    padding-bottom: 30px;
+  }
+  .about-benefits__title {
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .about-benefits__item-title {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .about-descr__text,
+  .about-benefits__item-par {
+    font-size: 12px;
+    line-height: 140.19%;
+  }
+  .about-benefits__items {
+    width: 100%;
+    padding-right: 6px;
+  }
+
+
+
+  .about-descr {
+    padding: 50px 0;
+  }
+  .about-descr__title {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .about-descr__item+.about-descr__item {
+    margin-top: 30px;
+  }
+
+
+  .about-features {
+    padding: 35px 0 50px;
+  }
+  .about-features__items {
+    width: 100%;
+  }
+
+
+  .economy__items {
+    width: 100%;
+    margin-left: auto;
+  }
+  .economy__title {
+    font-size: 18px;
+    line-height: 140.19%;
+    padding: 0 10px;
+  }
+  .economy__item-box {
+    padding-left: 30px;
+  }
+  .economy__item-box::after {
+    width: 14px;
+    height: 14px;
+  }
+
+
+  .about-motto__text {
+    padding: 0 15px;
+  }
 }

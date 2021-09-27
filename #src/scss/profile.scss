@@ -92,7 +92,7 @@
   // .profile__box
 
   &__box {
-    width: 40%;
+    min-width: 40%;
   }
 
 
@@ -182,10 +182,8 @@
   // .profile__orders
 
   &__orders {
-    min-width: 51.3%;
-    width: auto;
-    // flex-grow: 1;
-    margin-left: 10px;
+    width: calc( 100% - 320px - 35px );
+    margin-left: 30px;
 
   }
 }

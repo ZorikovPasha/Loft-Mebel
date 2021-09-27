@@ -1,0 +1,127 @@
+// 1200
+// 992
+//959
+// 810
+// 766
+// 680
+// 510
+
+@media (max-width:992px) {
+  .profile__box {
+    min-width: 320px;
+  }
+}
+
+@media (max-width:810px) {
+  .profile {
+    padding-bottom: 70px;
+  }
+  .profile__body {
+    flex-direction: column;
+  }
+  .profile__box {
+    margin-left: 30px;
+    margin-bottom: 40px;
+  }
+  .profile__orders {
+    width: auto;
+    flex-grow: 1;
+  }
+}
+
+@media (max-width:766px) {
+  .profile__terms {
+    flex-direction: column;
+  }
+  .profile__term + .profile__term {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+  .profile__names-right {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .profile__names {
+    flex-wrap: wrap;
+  }
+  .profile__heading {
+    margin-bottom: 15px;
+  }
+  .profile__terms {
+    padding: 16px 0;
+  }
+}
+
+@media (max-width:510px) {
+  .profile__box {
+    min-width: auto;
+    margin-left: 0;
+  }
+  .profile__orders {
+    margin-left: 0;
+  }
+
+  .orders__items {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: transparent;
+    border: none;
+  }
+  .orders__name.heading {
+    display: none;
+  }
+
+  .orders__cost.heading {
+    display: none;
+
+  }
+
+  .orders__date.heading {
+    display: none;
+
+  }
+
+  .orders__status.heading {
+    display: none;
+
+  }
+  .orders__name {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .orders__date,
+  .orders__cost,
+  .orders__status {
+    width: 32%;
+    display: block;
+    white-space: nowrap;
+    text-align: left;
+    font-size: 10px;
+    line-height: 147.69%;
+    background: #F3F3F3;
+  }
+
+  .orders__date::before {
+    content: 'Дата';
+    margin-right: 4px;
+  }
+  .orders__cost::before {
+    content: 'Цена';
+    margin-right: 4px;
+
+  }
+  .orders__status::before {
+    content: 'Статус';
+    margin-right: 4px;
+
+  }
+}
+
+@media (max-width:450px) {
+  .profile__names-right > p, a {
+    max-width: 106px;
+  }
+}

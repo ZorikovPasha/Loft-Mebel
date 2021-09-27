@@ -46,4 +46,15 @@ $(function() {
     $('.cart__top-num').text(itemsChosen)
   })
 
+  $('.item-sales').hover(
+    function() {
+      $(this).addClass('hovered')
+      $(this).find('.item-sales__bottom').addClass('appeared')
+    },
+    function() {
+      $(this).removeClass('hovered')
+      $(this).find('.item-sales__bottom').removeClass('appeared')
+    }
+  )
+
 })

@@ -23,6 +23,10 @@ body {
   font-size: 16px;
   line-height: 19px;
   color: $text;
+
+  &.lock {
+    overflow: hidden;
+  }
 }
 
 .container {
@@ -82,6 +86,10 @@ button {
     color: #969696;
   }
 
+  &__item-back {
+    display: none;
+  }
+
   &__item:not(:last-child)::after {
     content: "/";
     position: absolute;
@@ -95,6 +103,20 @@ button {
   // .breadcrumbs__link
 
   &__link {
+  }
+}
+
+
+@media (max-width:510px) {
+  .breadcrumbs__item:not(:last-child) {
+    display: none;
+  }
+  .breadcrumbs__item:last-child {
+    display: flex;
+  }
+  .breadcrumbs__item-back {
+    display: block;
+    margin-right: 7px;
   }
 }
 
