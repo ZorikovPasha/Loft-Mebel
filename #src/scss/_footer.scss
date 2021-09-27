@@ -172,3 +172,72 @@
     }
   }
 }
+
+
+@media (max-width:992px) {
+  .footer {
+    padding-top: 30px;
+  }
+  .bottom-footer__phone,
+  .bottom-footer__link,
+  .bottom-footer__mail {
+    font-size: 12px;
+    line-height: 126.69%;      
+  }
+}
+
+
+@media (max-width:766px) {
+  .bottom-footer {
+    justify-content: flex-end;
+  }
+  .bottom-footer__left {
+    display: none;
+  }
+  .footer__column {
+    display: none;
+  }
+  .footer__column--common {
+    flex-grow: 1;
+    // width: 100%;
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+  }
+  .footer__address {
+    max-width: 173px;
+    text-align: right;
+    margin-top: 0;
+  }
+  .bottom-footer__phone {
+    display: none;
+  }
+}
+
+@media (max-width:510px) {
+  .footer {
+    padding-top: 20px;
+  }
+  .bottom-footer {
+    padding: 15px 0;
+  }
+  .bottom-footer__contacts {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+  }
+  .bottom-footer__link {
+    margin-left: 0;
+    font-size: 11px;
+    line-height: 126.69%;
+  }
+  .bottom-footer__mail {
+    margin-left: 0;
+    font-size: 11px;
+    line-height: 126.69%;
+  }
+  .footer__address {
+    font-size: 11px;
+    line-height: 126.69%;
+  }
+}

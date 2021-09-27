@@ -34,16 +34,23 @@
 }
 .aside {
 
-  min-width: 263px;
-  background: #FFFFFF;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.07);
   margin-right: 28px;
   margin-bottom: 30px;
-  padding: 20px 20px 30px;
 
   // .aside__box
 
   &__box {
+    width: 263px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.07);
+    padding: 20px 20px 30px;
+  }
+
+  &__close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    display: none;
   }
 
   // .aside__form
@@ -275,7 +282,7 @@
 
   position: absolute;
   z-index: 30;
-  top: 24px;
+  top: 100%;
   right: 0;
 
   display: none;
@@ -294,5 +301,58 @@
 
   &__item + &__item {
     margin-top: 20px;
+  }
+}
+
+
+
+@media (max-width:992px) {
+  .aside {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-200%, 0);
+    transition: all .2s;
+    background: rgba(#f3f3f3, .2);
+
+    &.opened {
+      opacity: 1;
+      visibility: visible;  
+      transform: translate(0%, 0);
+    }
+  }
+
+  .aside__box {
+    min-height: 100%;
+    transform: translate(-200%, 0);
+
+    &.opened {
+      transform: translate(0%, 0);
+    }
+
+  }
+  .catalog__controls {
+    justify-content: space-between;
+  }
+  .controls__toggle-aside {
+    display: block;
+  }
+  .aside__close {
+    display: block;
+  }
+}
+
+@media (max-width:766px) {
+  .catalog__items {
+    grid-template-columns: repeat(2, 1fr );
+    grid-gap:  30px;
   }
 }
