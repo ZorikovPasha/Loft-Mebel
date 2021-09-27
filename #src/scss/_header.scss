@@ -251,7 +251,7 @@
     cursor: pointer;
     background-color: transparent;
 
-    @media (max-width:992px) {
+    @media (min-width:992px) {
       .categories__item:hover {
         background: #245462;
         color: #fff;
